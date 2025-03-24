@@ -1,0 +1,29 @@
+{
+    "Name": "GlobalProxyRussiaInside",
+    "GlobalProxy": "true",
+    "RemoteDNSType": "DoH",
+    "RemoteDNSDomain": "https://cloudflare-dns.com/dns-query",
+    "RemoteDNSIP": "1.1.1.1",
+    "DomesticDNSType": "DoH",
+    "DomesticDNSDomain": "https://dns.google/dns-query",
+    "DomesticDNSIP": "8.8.8.8",
+    "Geoipurl": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat",
+    "Geositeurl": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat",
+    "LastUpdated": "LAST_UPDATED",
+    "DnsHosts": {
+        "cloudflare-dns.com": "1.1.1.1",
+        "dns.google": "8.8.8.8"
+    },
+    "DirectSites": [
+      "geosite:category-ru",
+    ],
+    "DirectIp": [
+      "geoip:ru"
+    ],
+    "ProxySites": [],
+    "ProxyIp": [],
+    "BlockSites": [],
+    "BlockIp": [],
+    "DomainStrategy": "IPIfNonMatch",
+    "FakeDNS": "false"
+}

@@ -1,0 +1,35 @@
+
+{
+    "Name": "UkraineInside",
+    "GlobalProxy": "false",
+    "RemoteDNSType": "DoH",
+    "RemoteDNSDomain": "https://cloudflare-dns.com/dns-query",
+    "RemoteDNSIP": "1.1.1.1",
+    "DomesticDNSType": "DoH",
+    "DomesticDNSDomain": "https://dns.google/dns-query",
+    "DomesticDNSIP": "8.8.8.8",
+    "Geoipurl": "https://github.com/KazZzeL/allow-domains-dat/releases/latest/download/allow-subnets.dat",
+    "Geositeurl": "https://github.com/KazZzeL/allow-domains-dat/releases/latest/download/ukraine-inside.dat",
+    "LastUpdated": "LAST_UPDATED",
+    "DnsHosts": {
+        "cloudflare-dns.com": "1.1.1.1",
+        "dns.google": "8.8.8.8"
+    },
+    "DirectSites": [],
+    "DirectIp": [
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16",
+        "169.254.0.0/16",
+        "224.0.0.0/4",
+        "255.255.255.255"
+    ],
+    "ProxySites": [
+        "geosite:list",
+    ],
+    "ProxyIp": [],
+    "BlockSites": [],
+    "BlockIp": [],
+    "DomainStrategy": "IPIfNonMatch",
+    "FakeDNS": "false"
+}
