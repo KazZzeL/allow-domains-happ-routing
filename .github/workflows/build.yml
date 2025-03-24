@@ -34,7 +34,7 @@ jobs:
           cd publish
           for config in ./*.json; do
             sed -i "s/LAST_UPDATED/${LAST_UPDATED}/" $config
-            echo -n "happ://routing/onadd/$(base64 $config)" > "$(basename $config .json).deeplink"
+            echo -n "happ://routing/onadd/$(base64 -w 0 $config)" > "$(basename $config .json).deeplink"
           done
 
       - name: Generate hashes
