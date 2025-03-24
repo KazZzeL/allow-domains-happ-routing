@@ -1,0 +1,52 @@
+name: Build .deeplink files
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "**/README.md"
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v4
+        with:
+          path: publish
+
+      - name: Set environment variables
+        run: |
+          echo "LAST_UPDATED=$(date +'%s')" >> $GITHUB_ENV
+          echo "RELEASE_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Make deeplinks
+        run: |
+          cd publish
+          for config in ./*.json; do
+            sed -i "s/LAST_UPDATED/${LAST_UPDATED}/" $config
+            echo "happ://routing/onadd/$(base64 $config)" > "$(basename $config .json).deeplink"
+          done
+
+      - name: Generate hashes
+        run: |
+          cd publish
+          for filename in ./*.deeplink; do
+            sha256sum $filename > "${filename}.sha256sum"
+          done
+
+      - name: Release and upload assets
+        run: |
+          cd publish
+          gh release create ${{ env.TAG_NAME }} -t ${{ env.RELEASE_NAME }} ./*.deeplink ./*.deeplink.sha256sum
+        env:
+          GH_TOKEN: ${{ github.token }}
