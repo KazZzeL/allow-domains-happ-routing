@@ -33,6 +33,6 @@
     ],
     "BlockSites": [],
     "BlockIp": [],
-    "DomainStrategy": "IPIfNonMatch",
-    "FakeDNS": "false"
+    "DomainStrategy": "IPOnDemand",
+    "FakeDNS": "true"
 }
