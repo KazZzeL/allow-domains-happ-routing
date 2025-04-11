@@ -47,6 +47,6 @@ jobs:
       - name: Release and upload assets
         run: |
           cd publish
-          gh release create ${{ env.TAG_NAME }} -t ${{ env.RELEASE_NAME }} ./*.deeplink ./*.deeplink.sha256sum
+          gh release create ${{ env.TAG_NAME }} -t ${{ env.RELEASE_NAME }} -n "Updated geofiles" ./*.deeplink ./*.deeplink.sha256sum
         env:
           GH_TOKEN: ${{ github.token }}
