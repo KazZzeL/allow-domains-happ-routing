@@ -1,4 +1,4 @@
-Ссылки генерируются ежедневно примерно каждые 12 часов на основе списков [KazZzeL/allow-domains-dat](https://github.com/KazZzeL/allow-domains-dat)
+Ссылки генерируются ежедневно примерно в 8:00 (МСК) на основе списков [KazZzeL/allow-domains-dat](https://github.com/KazZzeL/allow-domains-dat)
 
 ## Статические ссылки с контентом deeplink
 
