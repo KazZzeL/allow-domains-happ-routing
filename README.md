@@ -1,4 +1,14 @@
+# Кастомный роутинг AllowDomains для приложения [Happ](https://happ.su/)
+
 Ссылки генерируются при обновлении списков [KazZzeL/allow-domains-dat](https://github.com/KazZzeL/allow-domains-dat)
+
+## Статические ссылки с редиректом на актуальный deeplink (открывать с устройства, на которое добавляется)
+
+- **[russia-inside](happ-routing.redirectme.net/ri)**
+- **[russia-outside](happ-routing.redirectme.net/ro)**
+- **[ukraine-inside](happ-routing.redirectme.net/ui)**
+- **[global-proxy-russia-inside](happ-routing.redirectme.net/gpri)**
+- **[global-proxy-ukraine-inside](happ-routing.redirectme.net/gpui)**
 
 ## Deeplink-и с контентом роутинга
 
