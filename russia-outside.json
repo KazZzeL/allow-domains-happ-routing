@@ -24,11 +24,13 @@
         "255.255.255.255"
     ],
     "ProxySites": [
-        "geosite:list",
+        "domain:connectivitycheck.gstatic.com,
+        "domain:www.gstatic.com",
+        "geosite:list"
     ],
     "ProxyIp": [],
     "BlockSites": [],
     "BlockIp": [],
     "DomainStrategy": "IPIfNonMatch",
-    "FakeDNS": "false"
+    "FakeDNS": "true"
 }
