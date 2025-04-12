@@ -1,10 +1,10 @@
 {
     "Name": "RussiaInside",
     "GlobalProxy": "false",
-    "RemoteDNSType": "DoH",
+    "RemoteDNSType": "DoU",
     "RemoteDNSDomain": "https://cloudflare-dns.com/dns-query",
     "RemoteDNSIP": "1.1.1.1",
-    "DomesticDNSType": "DoH",
+    "DomesticDNSType": "DoU",
     "DomesticDNSDomain": "https://dns.google/dns-query",
     "DomesticDNSIP": "8.8.8.8",
     "Geoipurl": "https://github.com/KazZzeL/allow-domains-dat/releases/latest/download/allow-subnets.dat",
@@ -24,7 +24,9 @@
         "255.255.255.255"
     ],
     "ProxySites": [
-        "geosite:list",
+        "domain:connectivitycheck.gstatic.com",
+        "domain:www.gstatic.com",
+        "geosite:list"
     ],
     "ProxyIp": [
         "geoip:discord",
