@@ -16,6 +16,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
     steps:
       - name: Checkout codebase
         uses: actions/checkout@v4
@@ -24,16 +29,14 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "LAST_UPDATED=$(date +'%s')" >> $GITHUB_ENV
           echo "RELEASE_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
-        shell: bash
 
       - name: Make deeplinks
         run: |
           cd publish
           for config in ./*.json; do
-            sed -i "s/LAST_UPDATED/${LAST_UPDATED}/" $config
+            sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" $config
             echo -n "happ://routing/onadd/$(base64 -w 0 $config)" > "$(basename $config .json).deeplink"
           done
 
