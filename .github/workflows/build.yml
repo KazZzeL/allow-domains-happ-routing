@@ -35,16 +35,16 @@ jobs:
       - name: Make deeplinks
         run: |
           cd publish
-          for config in ./*.json; do
-            sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" $config
-            echo -n "happ://routing/onadd/$(base64 -w 0 $config)" > "$(basename $config .json).deeplink"
+          for routing in ./*.json; do
+            sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" "${routing}"
+            echo -n "happ://routing/onadd/$(base64 -w 0 "${routing}")" > "$(basename "${routing}" .json).deeplink"
           done
 
       - name: Generate hashes
         run: |
           cd publish
-          for filename in ./*.deeplink; do
-            sha256sum $filename > "${filename}.sha256sum"
+          for deeplink in ./*.deeplink; do
+            sha256sum "${deeplink}" > "${deeplink}.sha256sum"
           done
 
       - name: Release and upload assets
