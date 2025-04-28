@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - "**/README.md"
   repository_dispatch:
-    types: [trigger-workflow]
+    types: [trigger-routing-build]
   workflow_dispatch:
 
 permissions:
