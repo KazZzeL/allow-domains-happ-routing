@@ -1,0 +1,60 @@
+{
+    "Name": "AllowDomains",
+    "GlobalProxy": "false",
+    "RemoteDNSType": "DoU",
+    "RemoteDNSDomain": "https://cloudflare-dns.com/dns-query",
+    "RemoteDNSIP": "1.1.1.1",
+    "DomesticDNSType": "DoU",
+    "DomesticDNSDomain": "https://dns.google/dns-query",
+    "DomesticDNSIP": "8.8.8.8",
+    "Geoipurl": "https://github.com/KazZzeL/allow-domains-dat/releases/latest/download/allow-subnets.dat",
+    "Geositeurl": "https://github.com/KazZzeL/allow-domains-dat/releases/latest/download/allow-domains.dat",
+    "LastUpdated": "LAST_UPDATED",
+    "DnsHosts": {
+        "cloudflare-dns.com": "1.1.1.1",
+        "dns.google": "8.8.8.8"
+    },
+    "DirectSites": [],
+    "DirectIp": [
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16",
+        "169.254.0.0/16",
+        "224.0.0.0/4",
+        "255.255.255.255"
+    ],
+    "ProxySites": [
+        "domain:connectivitycheck.gstatic.com",
+        "domain:www.gstatic.com",
+        "geosite:anime",
+        "geosite:block",
+        "geosite:geoblock",
+        "geosite:news",
+        "geosite:porn",
+        "geosite:cloudflare",
+        "geosite:discord",
+        "geosite:google_ai",
+        "geosite:google_play",
+        "geosite:hdrezka",
+        "geosite:hetzner",
+        "geosite:meta",
+        "geosite:ovh",
+        "geosite:telegram",
+        "geosite:tiktok",
+        "geosite:twitter",
+        "geosite:youtube"
+    ],
+    "ProxyIp": [
+        "geoip:cloudflare",
+        "geoip:discord",
+        "geoip:hetzner",
+        "geoip:meta",
+        "geoip:ovh",
+        "geoip:telegram",
+        "geoip:twitter"
+    ],
+    "BlockSites": [],
+    "BlockIp": [],
+    "DomainStrategy": "IPOnDemand",
+    "FakeDNS": "true"
+}
