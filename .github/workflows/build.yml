@@ -23,14 +23,9 @@ jobs:
 
     steps:
       - name: Checkout codebase
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: publish
-
-      - name: Set environment variables
-        run: |
-          echo "RELEASE_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
-          echo "TAG_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
 
       - name: Make deeplinks
         run: |
@@ -53,3 +48,5 @@ jobs:
           gh release create ${{ env.TAG_NAME }} -t ${{ env.RELEASE_NAME }} -n "Updated geofiles" ./*.deeplink ./*.deeplink.sha256sum
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
+          TAG_NAME: $(date +'%Y-%m-%d_%H-%M-%S')

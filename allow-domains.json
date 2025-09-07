@@ -1,6 +1,7 @@
 {
     "Name": "AllowDomains",
     "GlobalProxy": "false",
+    "UseChunkFiles": "true",
     "RemoteDNSType": "DoU",
     "RemoteDNSDomain": "https://cloudflare-dns.com/dns-query",
     "RemoteDNSIP": "1.1.1.1",

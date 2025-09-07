@@ -1,6 +1,7 @@
 {
     "Name": "GlobalProxyRussiaInside",
     "GlobalProxy": "true",
+    "UseChunkFiles": "true",
     "RemoteDNSType": "DoH",
     "RemoteDNSDomain": "https://cloudflare-dns.com/dns-query",
     "RemoteDNSIP": "1.1.1.1",
@@ -15,7 +16,7 @@
         "dns.google": "8.8.8.8"
     },
     "DirectSites": [
-      "geosite:category-ru",
+      "geosite:category-ru"
     ],
     "DirectIp": [
       "geoip:ru"
@@ -24,6 +25,6 @@
     "ProxyIp": [],
     "BlockSites": [],
     "BlockIp": [],
-    "DomainStrategy": "IPIfNonMatch",
+    "DomainStrategy": "IPOnDemand",
     "FakeDNS": "false"
 }
