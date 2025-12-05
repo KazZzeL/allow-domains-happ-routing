@@ -36,6 +36,7 @@
     "ProxyIp": [],
     "BlockSites": [],
     "BlockIp": [],
+    "OrderRouting": "block-direct-proxy",
     "DomainStrategy": "IPOnDemand",
     "FakeDNS": "false"
 }
