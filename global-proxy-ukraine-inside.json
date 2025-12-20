@@ -37,6 +37,6 @@
     "ProxyIp": [],
     "BlockSites": [],
     "BlockIp": [],
-    "DomainStrategy": "IPOnDemand",
+    "DomainStrategy": "IPIfNonMatch",
     "FakeDNS": "false"
 }
