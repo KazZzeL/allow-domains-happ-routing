@@ -15,6 +15,7 @@
         "cloudflare-dns.com": "1.1.1.1",
         "dns.google": "8.8.8.8"
     },
+    "RouteOrder": "block-direct-proxy",
     "DirectSites": [],
     "DirectIp": [
       "10.0.0.0/8",
@@ -36,7 +37,6 @@
     "ProxyIp": [],
     "BlockSites": [],
     "BlockIp": [],
-    "OrderRouting": "block-direct-proxy",
     "DomainStrategy": "IPOnDemand",
     "FakeDNS": "false"
 }
