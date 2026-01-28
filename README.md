@@ -3,6 +3,7 @@
 Ссылки генерируются при обновлении списков [KazZzeL/allow-domains-dat](https://github.com/KazZzeL/allow-domains-dat)
 
 ## Статические ссылки с редиректом на deeplink (открывать с устройства, на которое добавляется)
+## !!! Временно недоступно !!!
 
 - **[AllowDomains-All](https://happ-routing.redirectme.net/adal)**
 - **[AllowDomains-RussiaInside](https://happ-routing.redirectme.net/adri)**
@@ -27,19 +28,13 @@
 
 - **AllowDomains-All**:
   - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink)
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink.sha256sum](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink.sha256sum)
 - **AllowDomains-RussiaInside**:
   - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink)
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink.sha256sum](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink.sha256sum)
 - **AllowDomains-RussiaOutside**:
   - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink)
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink.sha256sum](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink.sha256sum)
 - **AllowDomains-UkraineInside**:
   - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink)
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink.sha256sum](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink.sha256sum)
 - **GlobalProxy-RussiaInside** (содержит геофайлы Loyalsoldier, очень тяжёлые для ОЗУ):
   - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink)
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink.sha256sum](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink.sha256sum)
 - **GlobalProxy-UkraineInside** (содержит геофайлы Loyalsoldier, очень тяжёлые для ОЗУ):
   - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink)
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink.sha256sum](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink.sha256sum)
