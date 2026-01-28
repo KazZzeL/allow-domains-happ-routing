@@ -40,6 +40,7 @@
     "ProxyIp": [
         "geoip:discord",
         "geoip:meta",
+        "geoip:roblox",
         "geoip:telegram",
         "geoip:twitter"
     ],

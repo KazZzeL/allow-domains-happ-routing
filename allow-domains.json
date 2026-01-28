@@ -54,6 +54,7 @@
         "geosite:hetzner",
         "geosite:meta",
         "geosite:ovh",
+        "geosite:roblox",
         "geosite:telegram",
         "geosite:tiktok",
         "geosite:twitter",
@@ -67,6 +68,7 @@
         "geoip:hetzner",
         "geoip:meta",
         "geoip:ovh",
+        "geoip:roblox",
         "geoip:telegram",
         "geoip:twitter"
     ],

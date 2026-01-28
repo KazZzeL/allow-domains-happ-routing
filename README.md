@@ -27,14 +27,14 @@
 ## Deeplink-и с контентом роутинга
 
 - **AllowDomains-All**:
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink)
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/allow-domains.deeplink
 - **AllowDomains-RussiaInside**:
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink)
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-inside.deeplink
 - **AllowDomains-RussiaOutside**:
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink)
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/russia-outside.deeplink
 - **AllowDomains-UkraineInside**:
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink)
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/ukraine-inside.deeplink
 - **GlobalProxy-RussiaInside** (содержит геофайлы Loyalsoldier, очень тяжёлые для ОЗУ):
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink)
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink
 - **GlobalProxy-UkraineInside** (содержит геофайлы Loyalsoldier, очень тяжёлые для ОЗУ):
-  - [https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink](https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink)
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink
