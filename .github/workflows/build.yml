@@ -18,9 +18,6 @@ on:
 permissions:
   contents: write
 
-env:
-  RELEASE_MSG: ${{ github.event.client_payload.message || inputs.message || github.event.head_commit.message }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,5 +46,6 @@ jobs:
           gh release create "${{ env.TAG_NAME }}" -t "${{ env.RELEASE_NAME }}" -n "${{ env.RELEASE_MSG }}" ./*.deeplink
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_MSG: ${{ github.event.client_payload.message || inputs.message || github.event.head_commit.message }}
           RELEASE_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
           TAG_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
