@@ -46,7 +46,7 @@ jobs:
       - name: Release and upload assets
         run: |
           cd publish
-          gh release create ${{ env.TAG_NAME }} -t ${{ env.RELEASE_NAME }} -n ${{ env.RELEASE_MSG }} ./*.deeplink
+          gh release create "${{ env.TAG_NAME }}" -t "${{ env.RELEASE_NAME }}" -n "${{ env.RELEASE_MSG }}" ./*.deeplink
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
