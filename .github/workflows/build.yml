@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 env:
-  RELEASE_MSG: ${{ github.event.client_payload.commit_message || inputs.message || github.event.head_commit.message }}
+  RELEASE_MSG: ${{ github.event.client_payload.message || inputs.message || github.event.head_commit.message }}
 
 jobs:
   build:
