@@ -11,9 +11,18 @@ on:
   workflow_dispatch:
     inputs:
       message:
+        description: 'Release message'
         required: false
         type: string
         default: 'Updated geofiles'
+      mode:
+        description: 'Routing mode'
+        required: false
+        type: choice
+        options:
+          - add
+          - onadd
+        default: 'onadd'
 
 permissions:
   contents: write
@@ -37,7 +46,7 @@ jobs:
           cd publish
           for routing in ./*.json; do
             sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" "${routing}"
-            echo -n "happ://routing/onadd/$(base64 -w 0 "${routing}")" > "$(basename "${routing}" .json).deeplink"
+            echo -n "happ://routing/${{ inputs.mode }}/$(base64 -w 0 "${routing}")" > "$(basename "${routing}" .json).deeplink"
           done
 
       - name: Release and upload assets
