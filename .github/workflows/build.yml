@@ -46,8 +46,10 @@ jobs:
           cd publish
           for routing in ./*.json; do
             sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" "${routing}"
-            echo -n "happ://routing/${{ inputs.mode }}/$(base64 -w 0 "${routing}")" > "$(basename "${routing}" .json).deeplink"
+            echo -n "happ://routing/${{ env.ROUTING_MODE }}/$(base64 -w 0 "${routing}")" > "$(basename "${routing}" .json).deeplink"
           done
+        env:
+          ROUTING_MODE: ${{ inputs.mode || 'onadd' }}
 
       - name: Release and upload assets
         run: |
