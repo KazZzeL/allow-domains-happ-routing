@@ -38,3 +38,6 @@
   - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-russia-inside.deeplink
 - **GlobalProxy-UkraineInside** (содержит геофайлы Loyalsoldier, очень тяжёлые для ОЗУ):
   - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/global-proxy-ukraine-inside.deeplink
+
+## Deeplink доя выключения роутинга
+  - https://github.com/KazZzeL/allow-domains-happ-routing/releases/latest/download/disable.deeplink
