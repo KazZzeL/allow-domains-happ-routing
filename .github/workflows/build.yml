@@ -55,9 +55,11 @@ jobs:
       - name: Release and upload assets
         run: |
           cd publish
-          gh release create "${{ env.TAG_NAME }}" -t "${{ env.RELEASE_NAME }}" -n "${{ env.RELEASE_MSG }}" ./*.deeplink
+          gh release create "${{ env.RELEASE_NAME }}" -t "${{ env.RELEASE_NAME }}" -n "${{ env.RELEASE_MSG }}" ./*.deeplink
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_MSG: ${{ github.event.client_payload.message || inputs.message || github.event.head_commit.message }}
           RELEASE_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
-          TAG_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
+          RELEASE_MSG: "${{
+            inputs.message ||
+            github.event.head_commit.message ||
+            format('new geofiles version: {0}', github.event.client_payload.version) }}"
