@@ -62,4 +62,4 @@ jobs:
           RELEASE_MSG: "${{
             inputs.message ||
             github.event.head_commit.message ||
-            format('new geofiles version: {0}', github.event.client_payload.version) }}"
+            format('new geofiles release: {0}', github.event.client_payload.version) }}"
