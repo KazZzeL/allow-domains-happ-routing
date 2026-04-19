@@ -44,9 +44,9 @@ jobs:
       - name: Make deeplinks
         run: |
           cd publish
-          for routing in ./*.json; do
-            sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" "${routing}"
-            echo -n "happ://routing/${{ env.ROUTING_MODE }}/$(base64 -w 0 "${routing}")" > "$(basename "${routing}" .json).deeplink"
+          for config in ./*.json; do
+            sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" "$config"
+            echo -n "happ://routing/${{ env.ROUTING_MODE }}/$(base64 -w 0 "$config")" > "$(basename "$config" .json).deeplink"
           done
           echo "happ://routing/off" > "disable.deeplink"
         env:
