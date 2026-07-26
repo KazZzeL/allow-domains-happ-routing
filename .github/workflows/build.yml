@@ -29,16 +29,19 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     defaults:
       run:
         shell: bash
 
     steps:
-      - name: Checkout codebase
-        uses: actions/checkout@v7
+      - name: Checkout templates
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          sparse-checkout: |
+            /*.json
+          sparse-checkout-cone-mode: false
           path: publish
 
       - name: Make deeplinks
@@ -52,14 +55,25 @@ jobs:
         env:
           ROUTING_MODE: ${{ inputs.mode || 'onadd' }}
 
+      - name: Generate checksums
+        run: cd publish && sha256sum *.deeplink > checksums.txt
+
+      - name: Set release tag
+        run: echo "TAG_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
+
       - name: Release and upload assets
-        run: |
-          cd publish
-          gh release create "${{ env.RELEASE_NAME }}" -t "${{ env.RELEASE_NAME }}" -n "${{ env.RELEASE_MSG }}" ./*.deeplink
+        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
+        with:
+          tag_name: "${{ env.TAG_NAME }}"
+          name: "${{ env.TAG_NAME }}"
+          body: "${{ env.RELEASE_MESSAGE }}"
+          prerelease: false
+          draft: false
+          files: |
+            publish/*.deeplink
+            publish/checksums.txt
         env:
-          GH_TOKEN: ${{ github.token }}
-          RELEASE_NAME: $(date +'%Y-%m-%d_%H-%M-%S')
-          RELEASE_MSG: "${{
+          RELEASE_MESSAGE: "${{
             inputs.message ||
             github.event.head_commit.message ||
             format('new geofiles release: {0}', github.event.client_payload.version) }}"
