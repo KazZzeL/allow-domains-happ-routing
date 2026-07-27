@@ -69,9 +69,11 @@ jobs:
           body: "${{ env.RELEASE_MESSAGE }}"
           prerelease: false
           draft: false
+          working_directory: publish
           files: |
-            publish/*.deeplink
-            publish/checksums.txt
+            *.deeplink
+            checksums.txt
+          fail_on_unmatched_files: true
         env:
           RELEASE_MESSAGE: "${{
             inputs.message ||
