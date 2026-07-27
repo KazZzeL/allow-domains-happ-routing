@@ -42,21 +42,21 @@ jobs:
           sparse-checkout: |
             /*.json
           sparse-checkout-cone-mode: false
-          path: publish
+          path: input
 
       - name: Make deeplinks
         run: |
-          cd publish
-          for config in ./*.json; do
+          mkdir -p output
+          for config in input/*.json; do
             sed -i "s/LAST_UPDATED/${EPOCHSECONDS}/" "$config"
-            echo -n "happ://routing/${{ env.ROUTING_MODE }}/$(base64 -w 0 "$config")" > "$(basename "$config" .json).deeplink"
+            echo -n "happ://routing/${{ env.ROUTING_MODE }}/$(base64 -w 0 "$config")" > "output/$(basename "$config" .json).deeplink"
           done
-          echo "happ://routing/off" > "disable.deeplink"
+          echo "happ://routing/off" > "output/disable.deeplink"
         env:
           ROUTING_MODE: ${{ inputs.mode || 'onadd' }}
 
       - name: Generate checksums
-        run: cd publish && sha256sum *.deeplink > checksums.txt
+        run: cd output && sha256sum *.deeplink > checksums.txt
 
       - name: Set release tag
         run: echo "TAG_NAME=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
@@ -69,7 +69,7 @@ jobs:
           body: "${{ env.RELEASE_MESSAGE }}"
           prerelease: false
           draft: false
-          working_directory: publish
+          working_directory: output
           files: |
             *.deeplink
             checksums.txt
